@@ -5,65 +5,58 @@ import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
   selector: 'app-navbar',
   imports: [ MdbCollapseModule ],
   template: `
-    <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-mdb-theme="light" style="background-color: #e3f2fd;">
   <!-- Container wrapper -->
   <div class="container-fluid">
-    <!-- Navbar brand -->
-    <a class="navbar-brand" href="#">Brand</a>
+    <a class="navbar-brand" href="#">
+      <img
+        src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.webp"
+        height="20"
+        alt=""
+        loading="lazy"
+      />
+    </a>
 
     <!-- Toggle button -->
     <button
       class="navbar-toggler"
       type="button"
-      (click)="basicNavbar.toggle()"
+      (click)="rightAligned.toggle()"
+      aria-controls="navbarRightAlignExample"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <i class="fas fa-bars"></i>
+      <i class="bi bi-list"></i>
     </button>
 
     <!-- Collapsible wrapper -->
     <div
       class="collapse navbar-collapse"
-      id="navbarSupportedContent"
+      id="navbarRightAlignExample"
       mdbCollapse
-      #basicNavbar="mdbCollapse"
+      #rightAligned="mdbCollapse"
     >
       <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" href="#">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Project Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
-            >Disabled</a
+          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact Us</a
           >
         </li>
       </ul>
       <!-- Left links -->
-
-      <!-- Search form -->
-      <form class="d-flex input-group w-auto">
-        <input
-          type="search"
-          class="form-control"
-          placeholder="Type query"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-primary" type="button" mdbRipple rippleColor="dark">
-          Search
-        </button>
-      </form>
     </div>
     <!-- Collapsible wrapper -->
   </div>
   <!-- Container wrapper -->
 </nav>
-<!-- Navbar -->
+
   `,
   styleUrls: ['./navbar.component.css'],
 })
