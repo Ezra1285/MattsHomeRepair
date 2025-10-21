@@ -1,24 +1,19 @@
 import {Component} from '@angular/core';
-import {Home} from './home/home';
 import { Navbar } from './navbar/navbar.component';
-import { HeroSectionComponent } from './hero-section/hero-section.component';
+import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [Home, Navbar, HeroSectionComponent],
+  imports: [Navbar, CommonModule, RouterOutlet],
   template: `
   
     <app-navbar></app-navbar>   
 
     <main>
-    
-    <app-hero-section></app-hero-section>
-
-      
-      <section class="content">
-        <app-home></app-home>
-      </section>
+      <router-outlet></router-outlet>
     </main>
+    
   `,
   styleUrls: ['./app.css'],
 })

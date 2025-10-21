@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
+import { RouterLinkWithHref, RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -40,13 +41,13 @@ import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
       <!-- Left links -->
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Services</a>
+          <a class="nav-link" href="#" routerLink='/home'>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Project Gallery</a>
+          <a class="nav-link" href="services">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact Us</a
+          <a class="nav-link" href="services">Contact Us</a
           >
         </li>
       </ul>
