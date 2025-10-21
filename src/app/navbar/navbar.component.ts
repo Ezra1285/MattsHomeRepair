@@ -41,14 +41,13 @@ import { RouterLinkWithHref, RouterModule, RouterOutlet } from '@angular/router'
       <!-- Left links -->
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#" routerLink='/home'>Home</a>
+          <a class="nav-link" href="#">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="services">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="services">Contact Us</a
-          >
+          <a class="nav-link" href="contact">Contact Us</a>
         </li>
       </ul>
       <!-- Left links -->

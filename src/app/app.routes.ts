@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { Home } from './home/home';
 import { Services } from './services/services';
+import { Contact } from './contact/contact';
 
 export const APP_ROUTES: Routes = [
     {
@@ -8,10 +9,8 @@ export const APP_ROUTES: Routes = [
         pathMatch: 'full',
         redirectTo: 'home'
     },
-    {
-        path: 'home',
-        component: Home
-    },
+    { path: 'home', component: Home },
     { path: 'services', component: Services },
-  
+    { path: 'contact', component: Contact },
+
 ];

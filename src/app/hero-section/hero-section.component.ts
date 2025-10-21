@@ -14,9 +14,9 @@ import { Component } from '@angular/core';
           <h5 class="mb-4">
             Best & free guide of responsive web design
           </h5>
-          <a data-mdb-ripple-init class="btn btn-outline-light btn-lg m-2" href="https://www.youtube.com/watch?v=c9B4TPnak1A"
+          <a data-mdb-ripple-init class="btn btn-outline-light btn-lg m-2" href="services"
             role="button" rel="nofollow" target="_blank">See services</a>
-          <a data-mdb-ripple-init class="btn btn-outline-light btn-lg m-2" href="https://mdbootstrap.com/docs/standard/"
+          <a data-mdb-ripple-init class="btn btn-outline-light btn-lg m-2" href="contact"
             target="_blank" role="button">Request a quote</a>
         </div>
       </div>
