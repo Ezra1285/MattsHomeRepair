@@ -37,7 +37,7 @@ import { Component } from '@angular/core';
             Matt@ICanFixIt.com
           </li>
           <li>
-            406-670-3937
+            (406)-123-1234
           </li>
         </ul>
       </div>
