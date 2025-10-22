@@ -1,0 +1,4 @@
+#contact_list li:first-child
+{
+    padding-top: 8px;
+}

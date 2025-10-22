@@ -13,7 +13,7 @@ import { RouterLinkWithHref, RouterModule, RouterOutlet } from '@angular/router'
     <a class="navbar-brand" href="#">
       <img
         src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.webp"
-        height="20"
+        height="40"
         alt=""
         loading="lazy"
       />

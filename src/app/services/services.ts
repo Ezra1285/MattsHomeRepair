@@ -4,9 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-services',
   imports: [],
   template: `
-    <h1>
-      services works!
-    </h1>
+    <h1>Services Works</h1>
   `,
   styles: ``
 })
