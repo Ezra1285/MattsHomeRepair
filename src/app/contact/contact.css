@@ -1,4 +1,28 @@
 #info_list
 {
     list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#info_list li
+{
+    
+}
+
+#contact_content
+{
+    margin: 70px 0px 80px 0px;
+    padding-left: 50px;
+}
+
+#form_content
+{
+    margin: 50px 0px 80px 0px;
+}
+ 
+#copy_label
+{
+    margin: 0px;
+    padding: 0px;
 }

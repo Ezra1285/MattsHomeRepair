@@ -15,9 +15,9 @@ import { Component } from '@angular/core';
             Proudly serving homeowners in Great Falls, MT and surrounding areas.
           </h5>
           <a data-mdb-ripple-init class="btn btn-outline-light btn-lg m-2" href="services"
-            role="button" rel="nofollow" target="_blank">See services</a>
+            role="button">See services</a>
           <a data-mdb-ripple-init class="btn btn-outline-light btn-lg m-2" href="contact"
-            target="_blank" role="button">Request a quote</a>
+            role="button">Request a quote</a>
         </div>
       </div>
     </div>

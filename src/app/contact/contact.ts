@@ -7,9 +7,9 @@ import { MdbFormsModule } from 'mdb-angular-ui-kit/forms'; // For MDBootstrap 5+
   imports: [MdbFormsModule],
   template: `
 
-<div id="home_content" class="container">
+<div class="container">
   <div class="row justify-content-center flex-wrap-reverse">
-    <div class="col-md-4">
+    <div id="form_content" class="col-md-4">
       <form>
   <!-- Name input -->
   <mdb-form-control class="mb-4">
@@ -37,7 +37,7 @@ import { MdbFormsModule } from 'mdb-angular-ui-kit/forms'; // For MDBootstrap 5+
   </mdb-form-control>
 
   <!-- Checkbox -->
-  <div class="form-check d-flex justify-content-center mb-4">
+  <div class="form-check d-flex justify-content-left mb-4">
     <input
       mdbCheckbox
       class="form-check-input me-2"
@@ -55,7 +55,7 @@ import { MdbFormsModule } from 'mdb-angular-ui-kit/forms'; // For MDBootstrap 5+
   <button mdbRipple type="button" class="btn btn-primary btn-block mb-4">Send</button>
   </form>
     </div>
-    <div class="col-md-6">
+    <div id="contact_content" class="col-md-6">
     <h2>Hire Clean Cut Handyman LLC for all of your renovation needs</h2>
     <p>
     Thank you for visiting the website of Clean Cut Handyman LLC in Billings, MT. Whether you need drywall repair services or fence installations,
