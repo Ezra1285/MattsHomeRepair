@@ -20,11 +20,13 @@
     "@coreui/angular": "~5.5.17",
     "@coreui/coreui": "^5.4.3",
     "@coreui/icons-angular": "~5.5.17",
+    "@emailjs/browser": "^4.4.1",
     "@popperjs/core": "~2.11.8",
     "@tailwindcss/postcss": "^4.1.14",
     "autoprefixer": "^10.4.21",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
+    "dotenv": "^17.2.3",
     "mdb-angular-ui-kit": "^9.0.0",
     "postcss": "^8.5.6",
     "rxjs": "~7.8.0",
@@ -36,7 +38,7 @@
     "@angular/build": "^20.2.0-next",
     "@angular/cli": "^20.2.0-next",
     "@angular/compiler-cli": "^20.2.0-next",
-    "@types/node": "^16.11.35",
+    "@types/node": "^16.18.126",
     "ts-node": "~10.9.0",
     "typescript": "~5.8.0"
   }

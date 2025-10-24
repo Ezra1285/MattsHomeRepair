@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MdbFormsModule } from 'mdb-angular-ui-kit/forms'; // For MDBootstrap 5+
-
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -10,30 +10,30 @@ import { MdbFormsModule } from 'mdb-angular-ui-kit/forms'; // For MDBootstrap 5+
 <div class="container">
   <div class="row justify-content-center flex-wrap-reverse">
     <div id="form_content" class="col-md-4">
-      <form>
+      <form id="email-form" class="contact-form" (submit)="sendEmail($event)">
   <!-- Name input -->
   <mdb-form-control class="mb-4">
     <label mdbLabel class="form-label" for="form4Example1">Name</label>
-    <input mdbInput type="text" id="form4Example1" class="form-control" />
+    <input mdbInput type="text" name="to_name" id="form4Example1" class="form-control" required/>
   </mdb-form-control>
 
   <!-- Email input -->
   <mdb-form-control class="mb-4">
     <label mdbLabel class="form-label" for="form4Example2">Email address</label>
-    <input mdbInput type="email" id="form4Example2" class="form-control" />
+    <input mdbInput type="email" name="to_email" id="form4Example2" class="form-control" required/>
   </mdb-form-control>
 
   <!-- Email input -->
   <mdb-form-control class="mb-4">
     <label mdbLabel class="form-label" for="form4Example2">Phone number</label>
-    <input mdbInput type="email" id="form4Example2" class="form-control" />
+    <input mdbInput type="tel" id="form4Example2" name="to_phone" class="form-control" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" maxlength="12" title="Ten digits code" />
   </mdb-form-control>
 
 
   <!-- Message input -->
   <mdb-form-control class="mb-4">
     <label mdbLabel class="form-label" for="form4Example3">Message</label>
-    <textarea mdbInput class="form-control" id="form4Example3" rows="4"></textarea>
+    <textarea mdbInput class="form-control" id="form4Example3" name="message_copy" rows="4" required></textarea>
   </mdb-form-control>
 
   <!-- Checkbox -->
@@ -52,7 +52,7 @@ import { MdbFormsModule } from 'mdb-angular-ui-kit/forms'; // For MDBootstrap 5+
   </div>
 
   <!-- Submit button -->
-  <button mdbRipple type="button" class="btn btn-primary btn-block mb-4">Send</button>
+  <button mdbRipple type="button" type="submit" class="btn btn-primary btn-block mb-4">Send</button>
   </form>
     </div>
     <div id="contact_content" class="col-md-6">
@@ -79,4 +79,21 @@ import { MdbFormsModule } from 'mdb-angular-ui-kit/forms'; // For MDBootstrap 5+
 })
 export class Contact {
 
+  
+  public sendEmail(e: Event) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_7mupsla', 'template_0k11feq', e.target as HTMLFormElement, {
+        publicKey: '6qBXIsKWOJaanhtFZ',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', (error as EmailJSResponseStatus).text);
+        },
+      );
+    }
 }
