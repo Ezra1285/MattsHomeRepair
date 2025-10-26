@@ -38,6 +38,7 @@
     "@angular/build": "^20.2.0-next",
     "@angular/cli": "^20.2.0-next",
     "@angular/compiler-cli": "^20.2.0-next",
+    "@types/bootstrap": "^5.2.10",
     "@types/node": "^16.18.126",
     "ts-node": "~10.9.0",
     "typescript": "~5.8.0"
