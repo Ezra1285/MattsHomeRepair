@@ -1,10 +1,17 @@
-h5 {
+h5,
+.copyright {
   font-family: "Montserrat", Arial, sans-serif;
+  color: #b28a00;
 }
 
 p,
 li {
   font-family: "Open Sans", "Times New Roman", serif;
+  color: #d4af37;
+}
+
+#my_footer {
+  background-color: #14232c;
 }
 
 #contact_list li:first-child {

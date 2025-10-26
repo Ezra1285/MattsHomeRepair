@@ -1,8 +1,20 @@
 a {
   font-family: "Montserrat", Arial, sans-serif;
+  color: #14232c;
 }
 :host {
   display: block;
+}
+
+li a:hover {
+  color: #b28a00;
+}
+
+li:hover {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #14232c;
 }
 
 @media screen and (max-width: 639px) {
