@@ -1,3 +1,21 @@
+h1,
+h2,
+button {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+p {
+  font-family: "Open Sans", "Times New Roman", serif;
+}
+
+.card-text {
+  font-weight: 600;
+}
+
 .card.mb-4.box-shadow {
   flex-direction: row;
   align-items: center;

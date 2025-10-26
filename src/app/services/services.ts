@@ -48,7 +48,7 @@ import { Component } from "@angular/core";
                     <div class="btn-group">
                       <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-m btn-outline-secondary"
                       >
                         View More
                       </button>
@@ -82,7 +82,7 @@ import { Component } from "@angular/core";
                     <div class="btn-group">
                       <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-m btn-outline-secondary"
                       >
                         View More
                       </button>
@@ -116,7 +116,7 @@ import { Component } from "@angular/core";
                     <div class="btn-group">
                       <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-m btn-outline-secondary"
                       >
                         View More
                       </button>
@@ -148,7 +148,7 @@ import { Component } from "@angular/core";
                     <div class="btn-group">
                       <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-m btn-outline-secondary"
                       >
                         View More
                       </button>
@@ -179,7 +179,7 @@ import { Component } from "@angular/core";
                     <div class="btn-group">
                       <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-m btn-outline-secondary"
                       >
                         View More
                       </button>
@@ -202,7 +202,7 @@ import { Component } from "@angular/core";
               </div>
               <div class="card-body row-md-8">
                 <div class="card_text">
-                  <h2>Tile stuff</h2>
+                  <h2>TILE REPAIR AND INSTALL</h2>
                   <p class="card-text">Stuff and things</p>
                   <div
                     class="d-flex justify-content-between align-items-center"
@@ -210,7 +210,7 @@ import { Component } from "@angular/core";
                     <div class="btn-group">
                       <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-m btn-outline-secondary"
                       >
                         View More
                       </button>

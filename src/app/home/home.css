@@ -1,27 +1,25 @@
-#home_content
-{
+p {
+  font-family: "Open Sans", "Times New Roman", serif;
+}
+
+#home_content {
   margin-top: 70px;
   margin-bottom: 90px;
 }
 
-
-
-#photo_content p
-{
-  padding-left: 50px; 
+#photo_content p {
+  padding-left: 50px;
 }
 
-#photo_content p
-{
+#photo_content p {
   padding-top: 50px;
 }
 
-#photo_content img{
+#photo_content img {
   max-height: 200px;
   border-radius: 80px;
 
   display: block;
   margin-left: auto;
   margin-right: auto;
-
 }

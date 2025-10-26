@@ -1,28 +1,32 @@
-#info_list
-{
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
+h2 {
+  font-family: "Montserrat", Arial, sans-serif;
 }
 
-#info_list li
-{
-    
+p,
+li,
+label {
+  font-family: "Open Sans", "Times New Roman", serif;
 }
 
-#contact_content
-{
-    margin: 70px 0px 80px 0px;
-    padding-left: 50px;
+#info_list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
 }
 
-#form_content
-{
-    margin: 50px 0px 80px 0px;
+#info_list li {
 }
- 
-#copy_label
-{
-    margin: 0px;
-    padding: 0px;
+
+#contact_content {
+  margin: 70px 0px 80px 0px;
+  padding-left: 50px;
+}
+
+#form_content {
+  margin: 50px 0px 80px 0px;
+}
+
+#copy_label {
+  margin: 0px;
+  padding: 0px;
 }

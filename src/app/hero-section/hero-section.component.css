@@ -1,19 +1,27 @@
-  
+h1,
+h5 {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+a {
+  font-family: "Open Sans", "Times New Roman", serif;
+}
+
 /* Default height for small devices */
 #intro-example {
-    height: 400px;
-    background-image: url('../../assets/heroImage.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+  height: 400px;
+  background-image: url("../../assets/heroImage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #heroContent {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 /* Height for devices larger than 992px */
 @media (min-width: 992px) {
-    #intro-example {
+  #intro-example {
     height: 600px;
-    }
+  }
 }

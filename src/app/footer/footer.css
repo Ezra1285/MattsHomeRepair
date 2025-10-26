@@ -1,4 +1,12 @@
-#contact_list li:first-child
-{
-    padding-top: 8px;
+h5 {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+p,
+li {
+  font-family: "Open Sans", "Times New Roman", serif;
+}
+
+#contact_list li:first-child {
+  padding-top: 8px;
 }
