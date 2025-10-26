@@ -8,6 +8,11 @@ h2 {
   font-weight: 600;
 }
 
+.service_section h2,
+p {
+  color: #14232c;
+}
+
 p {
   font-family: "Open Sans", "Times New Roman", serif;
 }
@@ -45,14 +50,57 @@ p {
   margin-left: 20px;
 }
 
+.jumbotron {
+  margin-top: 35px;
+  margin-bottom: 30px;
+}
+
+.jumbotron button {
+  background-color: #b28a00;
+  font-size: 20px;
+}
+
+.jumbotron button i {
+  margin-right: 30px;
+  margin-left: 5px;
+}
+
+.service_section button {
+  background-color: #14232c;
+  color: white;
+}
+
 .service_section {
   transition: transform 0.25s, background 0.25s;
 }
+
 .service_section:hover {
   transform: scale(1.05);
   background: #8dc63f;
   position: relative;
   z-index: 1;
+}
+
+.service_section:hover h2 {
+  color: #b28a00;
+}
+
+.service_section:hover button {
+  background-color: #b28a00;
+}
+
+.jumbotron button:hover .my_icon {
+  position: relative; /* Essential for 'left', 'top', etc. to work */
+  animation: moveIcon 1s infinite alternate; /* Apply the animation */
+}
+
+@keyframes moveIcon {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 10px; /* Move 100px to the right */
+  }
 }
 
 @media screen and (max-width: 768px) {

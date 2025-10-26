@@ -16,9 +16,12 @@ import { Component } from "@angular/core";
           Removal, Small Roofing Jobs, Small Construction Jobs, Custom Projects,
           Trips to the Garbage Dump
         </p>
-        <p>
-          <a href="contact" class="btn btn-primary my-2">Request a Quote</a>
-        </p>
+        <div class="btn-group">
+          <button type="button" class="btn btn-lg btn-secondary">
+            START A QUOTE TODAY
+            <i class="bi bi-arrow-right my_icon"></i>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -50,7 +53,7 @@ import { Component } from "@angular/core";
                         type="button"
                         class="btn btn-m btn-outline-secondary"
                       >
-                        View More
+                        VIEW WINDOW REPLACEMENT SERVICES
                       </button>
                     </div>
                   </div>
@@ -84,7 +87,7 @@ import { Component } from "@angular/core";
                         type="button"
                         class="btn btn-m btn-outline-secondary"
                       >
-                        View More
+                        VIEW DOOR SERVICES
                       </button>
                     </div>
                   </div>
@@ -118,7 +121,7 @@ import { Component } from "@angular/core";
                         type="button"
                         class="btn btn-m btn-outline-secondary"
                       >
-                        View More
+                        VIEW SHOWER SERVICES
                       </button>
                     </div>
                   </div>
@@ -150,7 +153,7 @@ import { Component } from "@angular/core";
                         type="button"
                         class="btn btn-m btn-outline-secondary"
                       >
-                        View More
+                        VIEW SKYLIGHT SERVICES
                       </button>
                     </div>
                   </div>
@@ -181,7 +184,7 @@ import { Component } from "@angular/core";
                         type="button"
                         class="btn btn-m btn-outline-secondary"
                       >
-                        View More
+                        VIEW MIRROR SERVICES
                       </button>
                     </div>
                   </div>
@@ -212,7 +215,7 @@ import { Component } from "@angular/core";
                         type="button"
                         class="btn btn-m btn-outline-secondary"
                       >
-                        View More
+                        VIEW TILE SERVICES
                       </button>
                     </div>
                   </div>
