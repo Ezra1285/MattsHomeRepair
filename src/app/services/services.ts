@@ -17,10 +17,13 @@ import { Component } from "@angular/core";
           Trips to the Garbage Dump
         </p>
         <div class="btn-group">
-          <button type="button" class="btn btn-lg btn-secondary">
+          <!-- <button type="button" class="btn btn-lg btn-secondary"> -->
+          <a class="btn btn-lg btn-secondary" href="contact" role="button">
             START A QUOTE TODAY
             <i class="bi bi-arrow-right my_icon"></i>
-          </button>
+          </a>
+
+          <!-- </button> -->
         </div>
       </div>
     </section>

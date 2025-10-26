@@ -17,6 +17,10 @@ li:hover {
   text-decoration-color: #14232c;
 }
 
+a.nav-link.active {
+  color: #b28a00;
+}
+
 @media screen and (max-width: 639px) {
   header:has(#toggle:checked) #navigation {
     height: var(--menu-height, 10rem);

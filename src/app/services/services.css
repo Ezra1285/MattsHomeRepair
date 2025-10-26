@@ -55,12 +55,12 @@ p {
   margin-bottom: 30px;
 }
 
-.jumbotron button {
+.jumbotron a {
   background-color: #b28a00;
   font-size: 20px;
 }
 
-.jumbotron button i {
+.jumbotron a i {
   margin-right: 30px;
   margin-left: 5px;
 }
@@ -89,7 +89,7 @@ p {
   background-color: #b28a00;
 }
 
-.jumbotron button:hover .my_icon {
+.jumbotron a:hover .my_icon {
   position: relative; /* Essential for 'left', 'top', etc. to work */
   animation: moveIcon 1s infinite alternate; /* Apply the animation */
 }
