@@ -9,143 +9,145 @@ import * as bootstrap from "bootstrap"; // Import Bootstrap JS types
   template: `
     <div class="container">
       <div class="row justify-content-center flex-wrap-reverse">
-        <div id="form_content" class="col-md-4">
+        <div id="form_content" class="col-md-5">
           <form
             id="email-form"
             class="contact-form"
             (submit)="sendEmail($event)"
           >
-            <!-- Name input -->
-            <mdb-form-control class="mb-4">
-              <label mdbLabel class="form-label" for="form4Example1"
-                >Name</label
-              >
-              <input
-                mdbInput
-                type="text"
-                name="to_name"
-                id="form4Example1"
-                class="form-control"
-                required
-              />
-            </mdb-form-control>
+            <fieldset>
+              <!-- Name input -->
+              <mdb-form-control class="mb-4">
+                <label mdbLabel class="form-label" for="form4Example1"
+                  >Name</label
+                >
+                <input
+                  mdbInput
+                  type="text"
+                  name="to_name"
+                  id="form4Example1"
+                  class="form-control"
+                  required
+                />
+              </mdb-form-control>
 
-            <!-- Email input -->
-            <mdb-form-control class="mb-4">
-              <label mdbLabel class="form-label" for="form4Example2"
-                >Email address</label
-              >
-              <input
-                mdbInput
-                type="email"
-                name="to_email"
-                id="form4Example2"
-                class="form-control"
-                required
-              />
-            </mdb-form-control>
+              <!-- Email input -->
+              <mdb-form-control class="mb-4">
+                <label mdbLabel class="form-label" for="form4Example2"
+                  >Email address</label
+                >
+                <input
+                  mdbInput
+                  type="email"
+                  name="to_email"
+                  id="form4Example2"
+                  class="form-control"
+                  required
+                />
+              </mdb-form-control>
 
-            <!-- Email input -->
-            <mdb-form-control class="mb-4">
-              <label mdbLabel class="form-label" for="form4Example2"
-                >Phone number</label
-              >
-              <input
-                mdbInput
-                type="tel"
-                id="form4Example2"
-                name="to_phone"
-                class="form-control"
-                pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-                maxlength="12"
-                title="Ten digits code"
-              />
-            </mdb-form-control>
+              <!-- Email input -->
+              <mdb-form-control class="mb-4">
+                <label mdbLabel class="form-label" for="form4Example2"
+                  >Phone number</label
+                >
+                <input
+                  mdbInput
+                  type="tel"
+                  id="form4Example2"
+                  name="to_phone"
+                  class="form-control"
+                  pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                  maxlength="12"
+                  title="Ten digits code"
+                />
+              </mdb-form-control>
 
-            <!-- Message input -->
-            <mdb-form-control class="mb-4">
-              <label mdbLabel class="form-label" for="form4Example3"
-                >Message</label
-              >
-              <textarea
-                mdbInput
-                class="form-control"
-                id="form4Example3"
-                name="message_copy"
-                rows="4"
-                required
-              ></textarea>
-            </mdb-form-control>
+              <!-- Message input -->
+              <mdb-form-control class="mb-4">
+                <label mdbLabel class="form-label" for="form4Example3"
+                  >Message</label
+                >
+                <textarea
+                  mdbInput
+                  class="form-control"
+                  id="form4Example3"
+                  name="message_copy"
+                  rows="4"
+                  required
+                ></textarea>
+              </mdb-form-control>
 
-            <!-- Checkbox -->
-            <div class="form-check d-flex justify-content-left mb-4">
-              <input
-                mdbCheckbox
-                class="form-check-input me-2"
-                type="checkbox"
-                value=""
-                id="form4Example4"
-                [checked]="true"
-              />
-              <label class="form-check-label" for="form4Example4">
-                Send me a copy of this message
-              </label>
-            </div>
-
-            <!-- Submit button -->
-            <button
-              mdbRipple
-              type="button"
-              type="submit"
-              id="liveToastBtn"
-              class="btn btn-primary btn-block mb-4"
-            >
-              Send
-            </button>
-            <div class="toast-container position-fixed bottom-0 end-0 p-3">
-              <!-- ✅ Success Toast -->
-              <div
-                id="successToast"
-                class="toast bg-success text-white"
-                role="alert"
-                aria-live="assertive"
-                aria-atomic="true"
-              >
-                <div class="toast-header bg-success text-white">
-                  <i class="bi bi-envelope-check-fill"></i>
-                  <strong class="me-auto">Email sent</strong>
-                  <button
-                    type="button"
-                    class="btn-close btn-close-white"
-                    data-bs-dismiss="toast"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="toast-body">Thank you for your message</div>
+              <!-- Checkbox -->
+              <div class="form-check d-flex justify-content-left mb-4">
+                <input
+                  mdbCheckbox
+                  class="form-check-input me-2"
+                  type="checkbox"
+                  value=""
+                  id="form4Example4"
+                  [checked]="true"
+                />
+                <label class="form-check-label" for="form4Example4">
+                  Send me a copy of this message
+                </label>
               </div>
-              <!-- ❌ Failure Toast -->
-              <div
-                id="errorToast"
-                class="toast bg-danger text-white"
-                role="alert"
-                aria-live="assertive"
-                aria-atomic="true"
+
+              <!-- Submit button -->
+              <button
+                mdbRipple
+                type="button"
+                type="submit"
+                id="liveToastBtn"
+                class="btn btn-primary btn-block mb-4"
               >
-                <div class="toast-header bg-danger text-white">
-                  <strong class="me-auto">Send Failed</strong>
-                  <button
-                    type="button"
-                    class="btn-close btn-close-white"
-                    data-bs-dismiss="toast"
-                    aria-label="Close"
-                  ></button>
+                Send
+              </button>
+              <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <!-- ✅ Success Toast -->
+                <div
+                  id="successToast"
+                  class="toast bg-success text-white"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+                >
+                  <div class="toast-header bg-success text-white">
+                    <i class="bi bi-envelope-check-fill"></i>
+                    <strong class="me-auto">Email sent</strong>
+                    <button
+                      type="button"
+                      class="btn-close btn-close-white"
+                      data-bs-dismiss="toast"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="toast-body">Thank you for your message</div>
                 </div>
-                <div class="toast-body">
-                  Oops! Something went wrong. Please use the email above or
-                  call.
+                <!-- ❌ Failure Toast -->
+                <div
+                  id="errorToast"
+                  class="toast bg-danger text-white"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+                >
+                  <div class="toast-header bg-danger text-white">
+                    <strong class="me-auto">Send Failed</strong>
+                    <button
+                      type="button"
+                      class="btn-close btn-close-white"
+                      data-bs-dismiss="toast"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="toast-body">
+                    Oops! Something went wrong. Please use the email above or
+                    call.
+                  </div>
                 </div>
               </div>
-            </div>
+            </fieldset>
           </form>
         </div>
         <div id="contact_content" class="col-md-6">
