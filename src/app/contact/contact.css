@@ -44,3 +44,64 @@ label {
   margin: 0px;
   padding: 0px;
 }
+
+.moving_text {
+  display: inline-block;
+  position: relative;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.word {
+  position: absolute;
+  left: 140px;
+  bottom: 16px;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.letter {
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animate letters out smoothly */
+.letter.out {
+  opacity: 0;
+  transform: translateY(-0.8em);
+}
+
+/* Hidden state before entering */
+.letter.behind {
+  opacity: 0;
+  transform: translateY(0.8em);
+}
+
+/* Animate letters in smoothly */
+.letter.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: add a little delay to the whole word fade */
+.word.show {
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.wisteria {
+  color: #c0392b;
+}
+.belize {
+  color: rgb(41, 8, 125);
+}
+.pomegranate {
+  color: #27ae60;
+}
+.green {
+  color: #1c2f3a;
+}
+.midnight {
+  color: #b28a00;
+}

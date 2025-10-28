@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, AfterViewInit } from "@angular/core";
 import { MdbFormsModule } from "mdb-angular-ui-kit/forms"; // For MDBootstrap 5+
 import emailjs, { type EmailJSResponseStatus } from "@emailjs/browser";
 import * as bootstrap from "bootstrap"; // Import Bootstrap JS types
@@ -151,6 +151,17 @@ import * as bootstrap from "bootstrap"; // Import Bootstrap JS types
           </form>
         </div>
         <div id="contact_content" class="col-md-6">
+          <div class="moving_text">
+            <p>Repair is</p>
+            <p>
+              <span class="word wisteria">affordable.</span>
+              <span class="word belize">fast.</span>
+              <span class="word pomegranate">what we do best.</span>
+              <span class="word green">reliable.</span>
+              <span class="word midnight">built on trust.</span>
+            </p>
+          </div>
+
           <h2>Hire Clean Cut Handyman LLC for all of your renovation needs</h2>
           <p>
             Thank you for visiting the website of Clean Cut Handyman LLC in
@@ -219,5 +230,82 @@ export class Contact {
   private resetForm() {
     var resetForm = <HTMLFormElement>document.getElementById("email-form");
     resetForm.reset();
+  }
+
+  ngAfterViewInit(): void {
+    const words = Array.from(
+      document.getElementsByClassName("word")
+    ) as HTMLElement[];
+    const wordArray: HTMLElement[][] = [];
+    let currentWord = 0;
+
+    // Split each word into letters
+    words.forEach((word) => this.splitLetters(word, wordArray));
+
+    // Show first word
+    words[currentWord].style.opacity = "1";
+
+    const changeWord = () => {
+      const cw = wordArray[currentWord];
+      const nextIndex =
+        currentWord === wordArray.length - 1 ? 0 : currentWord + 1;
+      const nw = wordArray[nextIndex];
+
+      // Animate the current word out first
+      cw.forEach((letter, i) => this.animateLetterOut(letter, i));
+
+      // Wait until OUT animation is fully done before starting IN animation
+      const outDuration = cw.length * 80 + 500;
+
+      setTimeout(() => {
+        // Hide current word entirely
+        cw[0].parentElement!.style.opacity = "0";
+
+        // Prepare next word letters
+        nw.forEach((letter) => {
+          letter.className = "letter behind";
+        });
+
+        // Wait briefly before fading new word in
+        setTimeout(() => {
+          nw[0].parentElement!.style.opacity = "1";
+          nw.forEach((letter, i) => this.animateLetterIn(letter, i));
+          currentWord = nextIndex;
+        }, 300);
+      }, outDuration);
+    };
+
+    // Start
+    changeWord();
+    setInterval(changeWord, 4000);
+  }
+
+  private splitLetters(word: HTMLElement, wordArray: HTMLElement[][]): void {
+    const content = word.textContent || "";
+    word.textContent = "";
+    const letters: HTMLElement[] = [];
+
+    for (let i = 0; i < content.length; i++) {
+      const letter = document.createElement("span");
+      letter.className = "letter";
+      letter.textContent = content.charAt(i);
+      word.appendChild(letter);
+      letters.push(letter);
+    }
+
+    wordArray.push(letters);
+  }
+
+  private animateLetterOut(letter: HTMLElement, i: number): void {
+    setTimeout(() => {
+      letter.classList.add("out");
+    }, i * 80);
+  }
+
+  private animateLetterIn(letter: HTMLElement, i: number): void {
+    setTimeout(() => {
+      letter.classList.remove("behind");
+      letter.classList.add("in");
+    }, i * 80);
   }
 }
