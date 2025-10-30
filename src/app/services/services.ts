@@ -38,15 +38,18 @@ import { Component } from "@angular/core";
                   class="card-img-top"
                   data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
                   alt="Thumbnail [100%x225]"
-                  src="../assets/window_repair.jpg"
+                  src="../assets/cabinet1.jpg"
                   data-holder-rendered="true"
                 />
               </div>
               <div class="card-body row-md-8">
                 <div class="card_text">
-                  <h2>HOME WINDOW REPLACEMENT</h2>
+                  <h2>CABINETRY INSTALLATION</h2>
                   <p class="card-text">
-                    From adding an egress window to replaceing a whole house,
+                    We install kitchen, bathroom, and storage cabinets with
+                    precision and care. Whether you need new cabinets fitted or
+                    old ones replaced, we’ll make sure they’re level, secure,
+                    and ready for everyday use.
                   </p>
                   <div
                     class="d-flex justify-content-between align-items-center"
@@ -56,7 +59,7 @@ import { Component } from "@angular/core";
                         type="button"
                         class="btn btn-m btn-outline-secondary"
                       >
-                        VIEW WINDOW REPLACEMENT SERVICES
+                        VIEW PAST CABINET INSTALLS
                       </button>
                     </div>
                   </div>
@@ -71,16 +74,19 @@ import { Component } from "@angular/core";
                   class="card-img-top"
                   data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
                   alt="Thumbnail [100%x225]"
-                  src="../assets/new_door.jpg"
+                  src="../assets/shelf1.jpg"
                   data-holder-rendered="true"
                 />
               </div>
               <div class="card-body row-md-8">
                 <div class="card_text">
-                  <h2>DOORS</h2>
+                  <h2>CUSTOM BUILT-IN SHELVING</h2>
                   <p class="card-text">
-                    We offer sliding glass doors and french door sales adn
-                    services for the homeowner or property management company.
+                    Add storage that actually fits your home. From floating
+                    shelves to full built-ins, we design and install shelving
+                    that looks great and makes the most of your space. Every
+                    piece is measured, cut, and installed to match your style
+                    and needs.
                   </p>
                   <div
                     class="d-flex justify-content-between align-items-center"
@@ -90,7 +96,7 @@ import { Component } from "@angular/core";
                         type="button"
                         class="btn btn-m btn-outline-secondary"
                       >
-                        VIEW DOOR SERVICES
+                        VIEW PAST SHELVING SERVICES
                       </button>
                     </div>
                   </div>
@@ -105,16 +111,19 @@ import { Component } from "@angular/core";
                   class="card-img-top"
                   data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
                   alt="Thumbnail [100%x225]"
-                  src="../assets/new_shower.jpg"
+                  src="../assets/door1.jpg"
                   data-holder-rendered="true"
                 />
               </div>
               <div class="card-body row-md-8">
                 <div class="card_text">
-                  <h2>SHOWERS</h2>
+                  <h2>DOOR AND LOCK</h2>
                   <p class="card-text">
-                    We can create the perfect customer shower soultion to
-                    complete the bathroom of your dreams.
+                    Whether your door is sticking, worn out, or just outdated,
+                    we can replace it with something that fits right and looks
+                    great. From sturdy front doors to smooth interior installs,
+                    we make sure everything opens, closes, and locks exactly
+                    like it should.
                   </p>
                   <div
                     class="d-flex justify-content-between align-items-center"
@@ -124,7 +133,7 @@ import { Component } from "@angular/core";
                         type="button"
                         class="btn btn-m btn-outline-secondary"
                       >
-                        VIEW SHOWER SERVICES
+                        VIEW DOOR AND LOCK REPLACEMENT SERVICES
                       </button>
                     </div>
                   </div>
@@ -140,14 +149,20 @@ import { Component } from "@angular/core";
                   class="card-img-top"
                   data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
                   alt="Thumbnail [100%x225]"
-                  src="../assets/new_skylight.jpg"
+                  src="../assets/hearth1.jpg"
                   data-holder-rendered="true"
                 />
               </div>
               <div class="card-body row-md-8">
                 <div class="card_text">
-                  <h2>SKYLIGHTS</h2>
-                  <p class="card-text">Skylights... they are very cool</p>
+                  <h2>CUSTOM HEARTHS</h2>
+                  <p class="card-text">
+                    A new hearth can completely change the look of your
+                    fireplace. We design and install custom hearths that match
+                    your home’s style while adding function and durability. From
+                    simple stonework to detailed finishes, we’ll make sure it’s
+                    built to last.
+                  </p>
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
@@ -156,7 +171,7 @@ import { Component } from "@angular/core";
                         type="button"
                         class="btn btn-m btn-outline-secondary"
                       >
-                        VIEW SKYLIGHT SERVICES
+                        VIEW HEARTHS SERVICES
                       </button>
                     </div>
                   </div>
@@ -171,14 +186,18 @@ import { Component } from "@angular/core";
                   class="card-img-top"
                   data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
                   alt="Thumbnail [100%x225]"
-                  src="../assets/new_skylight.jpg"
+                  src="../assets/trimWork.png"
                   data-holder-rendered="true"
                 />
               </div>
               <div class="card-body row-md-8">
                 <div class="card_text">
-                  <h2>MIRRORS</h2>
-                  <p class="card-text">We provide customer mirror soultions</p>
+                  <h2>TRIM AND FINISH WORK</h2>
+                  <p class="card-text">
+                    Add the final touches that make a room stand out. From clean
+                    corners to detailed molding, we make sure every edge looks
+                    sharp and polished.
+                  </p>
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
@@ -187,7 +206,7 @@ import { Component } from "@angular/core";
                         type="button"
                         class="btn btn-m btn-outline-secondary"
                       >
-                        VIEW MIRROR SERVICES
+                        VIEW PAST TRIM SERVICES
                       </button>
                     </div>
                   </div>
@@ -202,14 +221,18 @@ import { Component } from "@angular/core";
                   class="card-img-top"
                   data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
                   alt="Thumbnail [100%x225]"
-                  src="../assets/new_tiles.jpg"
+                  src="../assets/mudroom1.jpg"
                   data-holder-rendered="true"
                 />
               </div>
               <div class="card-body row-md-8">
                 <div class="card_text">
-                  <h2>TILE REPAIR AND INSTALL</h2>
-                  <p class="card-text">Stuff and things</p>
+                  <h2>CLOSETS AND MUDROOMS</h2>
+                  <p class="card-text">
+                    Stay organized with custom-built spaces that fit your
+                    lifestyle. From storage solutions to stylish finishes, we
+                    build for function and flow.
+                  </p>
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
@@ -218,7 +241,7 @@ import { Component } from "@angular/core";
                         type="button"
                         class="btn btn-m btn-outline-secondary"
                       >
-                        VIEW TILE SERVICES
+                        VIEW PAST CLOSETS AND MUDROOMS SERVICES
                       </button>
                     </div>
                   </div>

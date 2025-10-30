@@ -27,9 +27,10 @@ p {
 }
 
 .service_section img {
-  height: 275px;
-  width: 100%;
-  display: block;
+  float: left;
+  width: 450px;
+  height: 400px;
+  object-fit: fill;
 }
 
 .card-body {
