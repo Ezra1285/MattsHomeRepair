@@ -162,24 +162,25 @@ import * as bootstrap from "bootstrap"; // Import Bootstrap JS types
             </p>
           </div>
 
-          <h2>Hire Clean Cut Handyman LLC for all of your renovation needs</h2>
+          <h2>Hire Nobel Custom Carpentry for all of your renovation needs</h2>
           <p>
-            Thank you for visiting the website of Clean Cut Handyman LLC in
-            Billings, MT. Whether you need drywall repair services or fence
-            installations, you can rely on your local handyman to get the job
-            done right.
+            Thank you for visiting the website of Nobel Custom Carpentry in
+            Great Falls, MT. Whether you need trim and finish services or
+            cabinetry installation, you can rely on us to get the job done
+            right.
           </p>
           <p>
             Please use the form on this page to contact us. You can also call
-            406-371-3060 today to speak with us immediately.
+            (970)-397-6700 today to speak with us immediately.
           </p>
 
           <ul id="info_list">
             <li><i class="bi bi-geo-alt-fill"></i> Great Falls</li>
             <li>
-              <i class="bi bi-envelope-check-fill"></i> Matt@ICanFixIt.com
+              <i class="bi bi-envelope-check-fill"></i>
+              Noblecarpentry406@gmail.com
             </li>
-            <li><i class="bi bi-telephone-inbound-fill"></i> (406)-123-1234</li>
+            <li><i class="bi bi-telephone-inbound-fill"></i> (970)-397-6700</li>
             <li>
               <i class="bi bi-person-fill-check"></i> Mon-Fri: 8:00AM - 5:00PM
             </li>

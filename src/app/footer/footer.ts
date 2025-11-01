@@ -25,8 +25,12 @@ import { Component } from "@angular/core";
             <h5 class="text-uppercase mb-0">Contact</h5>
 
             <ul id="contact_list" class="list-unstyled mb-0">
-              <li>Matt@ICanFixIt.com</li>
-              <li>(406)-123-1234</li>
+              <li>
+                <a href="mailto:Noblecarpentry406@gmail.com"
+                  >Noblecarpentry406@gmail.com</a
+                >
+              </li>
+              <li>(970)-397-6700</li>
             </ul>
           </div>
           <!--Grid column-->

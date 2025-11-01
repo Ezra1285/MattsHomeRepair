@@ -61,6 +61,11 @@ label {
   transition: opacity 0.8s ease-in-out;
 }
 
+#info_list li {
+  color: #14232c;
+  margin-bottom: 3px;
+}
+
 .letter {
   display: inline-block;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

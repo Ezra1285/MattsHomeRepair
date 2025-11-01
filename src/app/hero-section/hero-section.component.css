@@ -10,7 +10,7 @@ a {
 /* Default height for small devices */
 #intro-example {
   height: 400px;
-  background-image: url("../../assets/heroImage.jpg");
+  background-image: url("../../assets/house1.avif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
