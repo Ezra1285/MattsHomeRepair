@@ -28,13 +28,13 @@ p {
 
 .service_section img {
   float: left;
-  width: 450px;
-  height: 400px;
+  width: 325px;
+  height: 300px;
   object-fit: fill;
 }
 
 .card-body {
-  height: 275px;
+  height: 300px;
   width: 100%;
 }
 
@@ -69,6 +69,94 @@ p {
 .service_section button {
   background-color: #14232c;
   color: white;
+}
+
+/* Lightbox overlay */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.lightbox-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  transition: opacity 0.3s ease;
+}
+
+/* Navigation buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+.prev {
+  left: -60px;
+}
+.next {
+  right: -60px;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Counter text */
+.counter {
+  position: absolute;
+  bottom: -40px;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .service_section {
@@ -106,6 +194,12 @@ p {
 
 @media screen and (max-width: 768px) {
   .card.mb-4.box-shadow {
+    flex-direction: column;
+  }
+
+  .card.mb-4.box-shadow img {
+    width: 515px;
+    height: 300px;
     flex-direction: column;
   }
 }
