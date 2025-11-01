@@ -18,12 +18,7 @@ import {
       <!-- Container wrapper -->
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img
-            src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.webp"
-            height="40"
-            alt=""
-            loading="lazy"
-          />
+          <img src="../assets/logo1.png" height="75" alt="" loading="lazy" />
         </a>
 
         <!-- Toggle button -->
@@ -50,7 +45,7 @@ import {
             <li class="nav-item">
               <a
                 class="nav-link active"
-                routerLink="/"
+                routerLink="/home"
                 routerLinkActive="active"
                 [routerLinkActiveOptions]="{ exact: true }"
                 >Home</a
