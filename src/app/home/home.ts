@@ -10,7 +10,7 @@ import { HeroSectionComponent } from "../hero-section/hero-section.component";
         <div class="col-md-4">
           <img
             id="headshot_photo"
-            src="../../assets/headshot_photo.jpg"
+            src="../../assets/family_photo.jpg"
             class="img-fluid"
             alt="Headshot photo"
           />
@@ -25,9 +25,10 @@ import { HeroSectionComponent } from "../hero-section/hero-section.component";
             HI, I’m Matt Morris, owner and handyman at Noble Custom Carpentry
             serving Great Falls, MT and surrounding areas.
             <br /><br />
-            As a husband, father, businessman and homeowner I know how valuable
-            time is. That is why I specialize in helping homeowners tackle your
-            “to-Do-Lists”, freeing up your time to do what you love to do!
+            Time is your most valuable asset. As someone who juggles family,
+            business, and home ownership, I know the weight of a never-ending
+            to-do list. I specialize in one thing: reclaiming your time. Let me
+            expertly tackle your home projects so you can focus on living.
             <br /><br />
             I treat every home project as if it were my own, giving you the
             assurance of knowing that your projects will be completed in a
