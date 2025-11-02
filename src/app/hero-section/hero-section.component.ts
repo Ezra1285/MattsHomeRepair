@@ -15,7 +15,7 @@ import { Component } from "@angular/core";
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white">
             <h1 class="mb-3">
-              Choose Nobel Custom Carpentry For Your Next Project
+              Choose Noble Custom Carpentry For Your Next Project
             </h1>
             <h5 class="mb-4">
               Proudly serving homeowners in Great Falls, MT and surrounding

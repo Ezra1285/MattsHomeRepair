@@ -22,7 +22,7 @@ import { HeroSectionComponent } from "../hero-section/hero-section.component";
             alt="Repair logo"
           />
           <p>
-            HI, I’m Matt Morris, owner and handyman at Nobel Custom Carpentry
+            HI, I’m Matt Morris, owner and handyman at Noble Custom Carpentry
             serving Great Falls, MT and surrounding areas.
             <br /><br />
             As a husband, father, businessman and homeowner I know how valuable

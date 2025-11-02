@@ -162,9 +162,9 @@ import * as bootstrap from "bootstrap"; // Import Bootstrap JS types
             </p>
           </div>
 
-          <h2>Hire Nobel Custom Carpentry for all of your renovation needs</h2>
+          <h2>Hire Noble Custom Carpentry for all of your renovation needs</h2>
           <p>
-            Thank you for visiting the website of Nobel Custom Carpentry in
+            Thank you for visiting the website of Noble Custom Carpentry in
             Great Falls, MT. Whether you need trim and finish services or
             cabinetry installation, you can rely on us to get the job done
             right.
