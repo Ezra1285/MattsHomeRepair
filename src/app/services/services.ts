@@ -1,9 +1,14 @@
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import {
+  RouterLinkWithHref,
+  RouterModule,
+  RouterOutlet,
+} from "@angular/router";
 
 @Component({
   selector: "app-services",
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   template: `
     <section class="jumbotron text-center">
       <div class="container">
@@ -17,7 +22,12 @@ import { CommonModule } from "@angular/common";
         </p>
         <div class="btn-group">
           <!-- <button type="button" class="btn btn-lg btn-secondary"> -->
-          <a class="btn btn-lg btn-secondary" href="contact" role="button">
+          <a
+            class="btn btn-lg btn-secondary"
+            routerLink="/contact"
+            routerLinkActive="active"
+            role="button"
+          >
             START A QUOTE TODAY
             <i class="bi bi-arrow-right my_icon"></i>
           </a>

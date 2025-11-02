@@ -1,8 +1,13 @@
 import { Component } from "@angular/core";
+import {
+  RouterLinkWithHref,
+  RouterModule,
+  RouterOutlet,
+} from "@angular/router";
 
 @Component({
   selector: "app-hero-section",
-  imports: [],
+  imports: [RouterModule],
   template: `
     <!-- Background image -->
 
@@ -24,14 +29,16 @@ import { Component } from "@angular/core";
             <a
               data-mdb-ripple-init
               class="btn btn-outline-light btn-lg m-2"
-              href="/services"
+              routerLink="/services"
+              routerLinkActive="active"
               role="button"
               >See services</a
             >
             <a
               data-mdb-ripple-init
               class="btn btn-outline-light btn-lg m-2"
-              href="/contact"
+              routerLink="/contact"
+              routerLinkActive="active"
               role="button"
               >Request a quote</a
             >
