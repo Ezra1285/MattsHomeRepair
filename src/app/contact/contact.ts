@@ -156,9 +156,9 @@ import * as bootstrap from "bootstrap"; // Import Bootstrap JS types
             <p>
               <span class="word wisteria">affordable.</span>
               <span class="word belize">fast.</span>
-              <span class="word pomegranate">what we do best.</span>
+              <span class="word pomegranate">guaranteed.</span>
               <span class="word green">reliable.</span>
-              <span class="word midnight">built on trust.</span>
+              <span class="word midnight">stress-free.</span>
             </p>
           </div>
 

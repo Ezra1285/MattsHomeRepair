@@ -203,3 +203,26 @@ p {
     flex-direction: column;
   }
 }
+
+@media (max-width: 606px) {
+  .card.mb-4.box-shadow img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media (max-width: 444px) {
+  .card.mb-4.box-shadow {
+    min-height: 650px;
+  }
+}
+
+@media (max-width: 380px) {
+  .card.mb-4.box-shadow p {
+    font-size: 14px;
+  }
+
+  .card.mb-4.box-shadow h2 {
+    font-size: 22px;
+  }
+}

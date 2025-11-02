@@ -41,7 +41,7 @@ import {
       <div class="container">
         <div class="col">
           <div class="service_section">
-            <div class="card mb-4 box-shadow ">
+            <div class="card mb-4 box-shadow">
               <div class="row-md-4">
                 <img
                   class="card-img-top"

@@ -110,3 +110,22 @@ label {
 .midnight {
   color: #b28a00;
 }
+
+@media (max-width: 770px) {
+  #contact_content {
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 380px) {
+  .moving_text {
+    display: none;
+  }
+  #contact_content {
+    margin-top: 35px;
+  }
+
+  #contact_content h2 {
+    font-weight: 700;
+  }
+}
