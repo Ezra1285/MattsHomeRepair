@@ -24,14 +24,14 @@ import { Component } from "@angular/core";
             <a
               data-mdb-ripple-init
               class="btn btn-outline-light btn-lg m-2"
-              href="services"
+              href="/services"
               role="button"
               >See services</a
             >
             <a
               data-mdb-ripple-init
               class="btn btn-outline-light btn-lg m-2"
-              href="contact"
+              href="/contact"
               role="button"
               >Request a quote</a
             >
