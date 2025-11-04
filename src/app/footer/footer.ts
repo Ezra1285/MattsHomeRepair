@@ -26,11 +26,13 @@ import { Component } from "@angular/core";
 
             <ul id="contact_list" class="list-unstyled mb-0">
               <li>
-                <a href="mailto:Noblecarpentry406@gmail.com"
+                <a class="linkClass" href="mailto:Noblecarpentry406@gmail.com"
                   >Noblecarpentry406@gmail.com</a
                 >
               </li>
-              <li>(970)-397-6700</li>
+              <li>
+                <a class="linkClass" href="tel:9703976700">(970)-397-6700</a>
+              </li>
             </ul>
           </div>
           <!--Grid column-->

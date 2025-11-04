@@ -71,6 +71,10 @@ p {
   color: white;
 }
 
+#main_service_section {
+  margin: 0px 10px 0px 10px;
+}
+
 /* Lightbox overlay */
 .lightbox {
   position: fixed;

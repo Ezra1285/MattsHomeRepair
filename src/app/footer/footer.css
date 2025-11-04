@@ -23,7 +23,8 @@ li {
   padding-top: 8px;
 }
 
-#contact_list:hover a {
+.linkClass:hover {
   text-decoration: none;
+  font-weight: 600;
   color: #b28a00;
 }

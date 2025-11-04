@@ -15,9 +15,6 @@ p {
 
 #photo_content p {
   padding-left: 50px;
-}
-
-#photo_content p {
   padding-top: 50px;
 }
 
@@ -40,5 +37,10 @@ p {
 
   #home_content {
     margin-top: 40px;
+  }
+
+  #photo_content p {
+    padding-left: 0px;
+    margin: 0px 20px 0px 20px;
   }
 }

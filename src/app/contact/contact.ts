@@ -7,187 +7,194 @@ import * as bootstrap from "bootstrap"; // Import Bootstrap JS types
   selector: "app-contact",
   imports: [MdbFormsModule],
   template: `
-    <div class="container">
-      <div class="row justify-content-center flex-wrap-reverse">
-        <div id="form_content" class="col-md-5">
-          <form
-            id="email-form"
-            class="contact-form"
-            (submit)="sendEmail($event)"
-          >
-            <fieldset>
-              <!-- Name input -->
-              <mdb-form-control class="mb-4">
-                <label mdbLabel class="form-label" for="form4Example1"
-                  >Name</label
-                >
-                <input
-                  mdbInput
-                  type="text"
-                  name="to_name"
-                  id="form4Example1"
-                  class="form-control"
-                  required
-                />
-              </mdb-form-control>
+    <div id="main_contact_section">
+      <div class="container">
+        <div class="row justify-content-center flex-wrap-reverse">
+          <div id="form_content" class="col-md-5">
+            <form
+              id="email-form"
+              class="contact-form"
+              (submit)="sendEmail($event)"
+            >
+              <fieldset>
+                <!-- Name input -->
+                <mdb-form-control class="mb-4">
+                  <label mdbLabel class="form-label" for="form4Example1"
+                    >Name</label
+                  >
+                  <input
+                    mdbInput
+                    type="text"
+                    name="to_name"
+                    id="form4Example1"
+                    class="form-control"
+                    required
+                  />
+                </mdb-form-control>
 
-              <!-- Email input -->
-              <mdb-form-control class="mb-4">
-                <label mdbLabel class="form-label" for="form4Example2"
-                  >Email address</label
-                >
-                <input
-                  mdbInput
-                  type="email"
-                  name="to_email"
-                  id="form4Example2"
-                  class="form-control"
-                  required
-                />
-              </mdb-form-control>
+                <!-- Email input -->
+                <mdb-form-control class="mb-4">
+                  <label mdbLabel class="form-label" for="form4Example2"
+                    >Email address</label
+                  >
+                  <input
+                    mdbInput
+                    type="email"
+                    name="to_email"
+                    id="form4Example2"
+                    class="form-control"
+                    required
+                  />
+                </mdb-form-control>
 
-              <!-- Email input -->
-              <mdb-form-control class="mb-4">
-                <label mdbLabel class="form-label" for="form4Example2"
-                  >Phone number</label
-                >
-                <input
-                  mdbInput
-                  type="tel"
-                  id="form4Example2"
-                  name="to_phone"
-                  class="form-control"
-                  pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-                  maxlength="12"
-                  title="Ten digits code"
-                />
-              </mdb-form-control>
+                <!-- Email input -->
+                <mdb-form-control class="mb-4">
+                  <label mdbLabel class="form-label" for="form4Example2"
+                    >Phone number</label
+                  >
+                  <input
+                    mdbInput
+                    type="tel"
+                    id="form4Example2"
+                    name="to_phone"
+                    class="form-control"
+                    pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                    maxlength="12"
+                    title="Ten digits code"
+                  />
+                </mdb-form-control>
 
-              <!-- Message input -->
-              <mdb-form-control class="mb-4">
-                <label mdbLabel class="form-label" for="form4Example3"
-                  >Message</label
-                >
-                <textarea
-                  mdbInput
-                  class="form-control"
-                  id="form4Example3"
-                  name="message_copy"
-                  rows="4"
-                  required
-                ></textarea>
-              </mdb-form-control>
+                <!-- Message input -->
+                <mdb-form-control class="mb-4">
+                  <label mdbLabel class="form-label" for="form4Example3"
+                    >Message</label
+                  >
+                  <textarea
+                    mdbInput
+                    class="form-control"
+                    id="form4Example3"
+                    name="message_copy"
+                    rows="4"
+                    required
+                  ></textarea>
+                </mdb-form-control>
 
-              <!-- Checkbox -->
-              <div class="form-check d-flex justify-content-left mb-4">
-                <input
-                  mdbCheckbox
-                  class="form-check-input me-2"
-                  type="checkbox"
-                  value=""
-                  id="form4Example4"
-                  [checked]="true"
-                />
-                <label class="form-check-label" for="form4Example4">
-                  Send me a copy of this message
-                </label>
-              </div>
-
-              <!-- Submit button -->
-              <button
-                mdbRipple
-                type="button"
-                type="submit"
-                id="liveToastBtn"
-                class="btn btn-primary btn-block mb-4"
-              >
-                Send
-              </button>
-              <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                <!-- ✅ Success Toast -->
-                <div
-                  id="successToast"
-                  class="toast bg-success text-white"
-                  role="alert"
-                  aria-live="assertive"
-                  aria-atomic="true"
-                >
-                  <div class="toast-header bg-success text-white">
-                    <i class="bi bi-envelope-check-fill"></i>
-                    <strong class="me-auto">Email sent</strong>
-                    <button
-                      type="button"
-                      class="btn-close btn-close-white"
-                      data-bs-dismiss="toast"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="toast-body">Thank you for your message</div>
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-left mb-4">
+                  <input
+                    mdbCheckbox
+                    class="form-check-input me-2"
+                    type="checkbox"
+                    value=""
+                    id="form4Example4"
+                    [checked]="true"
+                  />
+                  <label class="form-check-label" for="form4Example4">
+                    Send me a copy of this message
+                  </label>
                 </div>
-                <!-- ❌ Failure Toast -->
-                <div
-                  id="errorToast"
-                  class="toast bg-danger text-white"
-                  role="alert"
-                  aria-live="assertive"
-                  aria-atomic="true"
+
+                <!-- Submit button -->
+                <button
+                  mdbRipple
+                  type="button"
+                  type="submit"
+                  id="liveToastBtn"
+                  class="btn btn-primary btn-block mb-4"
                 >
-                  <div class="toast-header bg-danger text-white">
-                    <strong class="me-auto">Send Failed</strong>
-                    <button
-                      type="button"
-                      class="btn-close btn-close-white"
-                      data-bs-dismiss="toast"
-                      aria-label="Close"
-                    ></button>
+                  Send
+                </button>
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                  <!-- ✅ Success Toast -->
+                  <div
+                    id="successToast"
+                    class="toast bg-success text-white"
+                    role="alert"
+                    aria-live="assertive"
+                    aria-atomic="true"
+                  >
+                    <div class="toast-header bg-success text-white">
+                      <i class="bi bi-envelope-check-fill"></i>
+                      <strong class="me-auto">Email sent</strong>
+                      <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="toast"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="toast-body">Thank you for your message</div>
                   </div>
-                  <div class="toast-body">
-                    Oops! Something went wrong. Please use the email above or
-                    call.
+                  <!-- ❌ Failure Toast -->
+                  <div
+                    id="errorToast"
+                    class="toast bg-danger text-white"
+                    role="alert"
+                    aria-live="assertive"
+                    aria-atomic="true"
+                  >
+                    <div class="toast-header bg-danger text-white">
+                      <strong class="me-auto">Send Failed</strong>
+                      <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="toast"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="toast-body">
+                      Oops! Something went wrong. Please use the email above or
+                      call.
+                    </div>
                   </div>
                 </div>
-              </div>
-            </fieldset>
-          </form>
-        </div>
-        <div id="contact_content" class="col-md-6">
-          <div class="moving_text">
-            <p>Repair is</p>
-            <p>
-              <span class="word wisteria">affordable.</span>
-              <span class="word belize">fast.</span>
-              <span class="word pomegranate">guaranteed.</span>
-              <span class="word green">reliable.</span>
-              <span class="word midnight">stress-free.</span>
-            </p>
+              </fieldset>
+            </form>
           </div>
+          <div id="contact_content" class="col-md-6">
+            <div class="moving_text">
+              <p>Repair is</p>
+              <p>
+                <span class="word wisteria">affordable.</span>
+                <span class="word belize">fast.</span>
+                <span class="word pomegranate">guaranteed.</span>
+                <span class="word green">reliable.</span>
+                <span class="word midnight">stress-free.</span>
+              </p>
+            </div>
 
-          <h2>Hire Noble Custom Carpentry for all of your renovation needs</h2>
-          <p>
-            Thank you for visiting the website of Noble Custom Carpentry in
-            Great Falls, MT. Whether you need trim and finish services or
-            cabinetry installation, you can rely on us to get the job done
-            right.
-          </p>
-          <p>
-            Please use the form on this page to contact us. You can also call
-            (970)-397-6700 today to speak with us immediately.
-          </p>
+            <h2>
+              Hire Noble Custom Carpentry for all of your renovation needs
+            </h2>
+            <p>
+              Thank you for visiting the website of Noble Custom Carpentry in
+              Great Falls, MT. Whether you need trim and finish services or
+              cabinetry installation, you can rely on us to get the job done
+              right.
+            </p>
+            <p>
+              Please use the form on this page to contact us. You can also call
+              (970)-397-6700 today to speak with us immediately.
+            </p>
 
-          <ul id="info_list">
-            <li><i class="bi bi-geo-alt-fill"></i> Great Falls</li>
-            <li>
-              <i class="bi bi-envelope-check-fill"></i>
-              Noblecarpentry406@gmail.com
-            </li>
-            <li><i class="bi bi-telephone-inbound-fill"></i> (970)-397-6700</li>
-            <li>
-              <i class="bi bi-person-fill-check"></i> Mon-Fri: 8:00AM - 5:00PM
-            </li>
-            <li>
-              <i class="bi bi-calendar-check-fill"></i> Sat-Sun: By Appointment
-            </li>
-          </ul>
+            <ul id="info_list">
+              <li><i class="bi bi-geo-alt-fill"></i> Great Falls</li>
+              <li>
+                <i class="bi bi-envelope-check-fill"></i>
+                Noblecarpentry406@gmail.com
+              </li>
+              <li>
+                <i class="bi bi-telephone-inbound-fill"></i> (970)-397-6700
+              </li>
+              <li>
+                <i class="bi bi-person-fill-check"></i> Mon-Fri: 8:00AM - 5:00PM
+              </li>
+              <li>
+                <i class="bi bi-calendar-check-fill"></i> Sat-Sun: By
+                Appointment
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
