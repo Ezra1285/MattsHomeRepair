@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks RewriteEngine On RewriteBase / # Don’t rewrite
+  existing files or directories RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d RewriteRule ^ - [L] # Send everything else
+  to index.html RewriteRule ^ index.html [L]
+</IfModule>
