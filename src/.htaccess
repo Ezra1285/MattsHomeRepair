@@ -1,6 +1,75 @@
+# ============================================================
+# 🔒 Force HTTPS and handle Angular routing (Noble Custom Carpentry)
+# ============================================================
 <IfModule mod_rewrite.c>
-  Options +FollowSymLinks RewriteEngine On RewriteBase / # Don’t rewrite
-  existing files or directories RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d RewriteRule ^ - [L] # Send everything else
-  to index.html RewriteRule ^ index.html [L]
+  Options +FollowSymLinks
+  RewriteEngine On
+  RewriteBase /
+
+  # --- Force HTTPS ---
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # --- Don’t rewrite existing files or directories ---
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # --- Send everything else to index.html (Angular routing) ---
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# ============================================================
+# ⚡ Browser caching (leverage cache for static assets)
+# ============================================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Images
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+
+  # CSS, JS
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+
+  # Default
+  ExpiresDefault "access plus 1 month"
+</IfModule>
+
+# ============================================================
+# 🌀 GZIP compression (reduce file size for faster loading)
+# ============================================================
+<IfModule mod_deflate.c>
+  # Compress HTML, CSS, JS, Text, XML, fonts
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE font/woff
+  AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
+
+# ============================================================
+# ✅ Security headers (optional, safe defaults)
+# ============================================================
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
 </IfModule>
