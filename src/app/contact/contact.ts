@@ -174,7 +174,7 @@ import * as bootstrap from "bootstrap"; // Import Bootstrap JS types
             </p>
             <p>
               Please use the form on this page to contact us. You can also call
-              (970)-397-6700 today to speak with us immediately.
+              (406)-750-4447 today to speak with us immediately.
             </p>
 
             <ul id="info_list">
@@ -184,7 +184,7 @@ import * as bootstrap from "bootstrap"; // Import Bootstrap JS types
                 Noblecarpentry406@gmail.com
               </li>
               <li>
-                <i class="bi bi-telephone-inbound-fill"></i> (970)-397-6700
+                <i class="bi bi-telephone-inbound-fill"></i> (406)-750-4447
               </li>
               <li>
                 <i class="bi bi-person-fill-check"></i> Mon-Fri: 8:00AM - 5:00PM

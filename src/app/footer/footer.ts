@@ -31,7 +31,7 @@ import { Component } from "@angular/core";
                 >
               </li>
               <li>
-                <a class="linkClass" href="tel:9703976700">(970)-397-6700</a>
+                <a class="linkClass" href="tel:4067504447">(406)-750-4447</a>
               </li>
             </ul>
           </div>
