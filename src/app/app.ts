@@ -16,11 +16,6 @@ import { ReactiveFormsModule } from "@angular/forms";
     </main>
 
     <app-footer></app-footer>
-
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Open Sans%7CMontserrat"
-    />
   `,
   styleUrls: ["./app.css"],
 })

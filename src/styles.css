@@ -1,25 +1,132 @@
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
-/* You can add global styles to this file, and also import other style files */
-* {
-  margin: 0;
-  padding: 0;
+/* ============================================================
+   Design tokens — Noble Custom Carpentry
+   Palette: navy + gold + warm wood
+   ============================================================ */
+:root {
+  /* Brand */
+  --color-navy: #14232c;
+  --color-navy-light: #1c2f3a;
+  --color-gold: #b28a00;
+  --color-gold-light: #d4af37;
+  --color-wood: #a9744f;
+  --color-wood-dark: #8a5c3b;
+  --color-wood-soft: #e9d7c4;
+
+  /* Surfaces & neutrals (warm) */
+  --color-cream: #faf5ef;
+  --color-surface: #ffffff;
+  --color-text: #1c2f3a;
+  --color-text-muted: #5c6b73;
+  --color-border: #e8ddce;
+
+  /* Typography */
+  --font-heading: "Calistoga", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+
+  /* Fluid type scale */
+  --fs-hero: clamp(2rem, 5vw, 3.25rem);
+  --fs-h1: clamp(1.75rem, 4vw, 2.5rem);
+  --fs-h2: clamp(1.35rem, 2.5vw, 1.75rem);
+  --fs-lead: clamp(1.05rem, 1.6vw, 1.2rem);
+  --fs-body: 1.0625rem; /* 17px */
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 18px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(20, 35, 44, 0.08);
+  --shadow: 0 8px 24px rgba(20, 35, 44, 0.12);
+  --shadow-lg: 0 16px 40px rgba(20, 35, 44, 0.18);
+
+  /* Motion */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: 0.25s var(--ease);
+}
+
+/* ============================================================
+   Base / reset
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Be Vietnam Pro', sans-serif;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-cream);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
-:root {
-  --primary-color: #605DC8;
-  --secondary-color: #8B89E6;
-  --accent-color: #e8e7fa;
-  --shadow-color: #E8E8E8;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 400; /* Calistoga is single-weight; avoid synthetic faux-bold */
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--color-gold);
+  transition: color var(--transition);
+}
+
+/* Accessible focus ring */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-gold-light);
+  outline-offset: 2px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 button.primary {
-  padding: 10px;
-  border: solid 1px var(--primary-color);
-  background: var(--primary-color);
+  padding: 10px 18px;
+  border: solid 1px var(--color-gold);
+  background: var(--color-gold);
   color: white;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
 }

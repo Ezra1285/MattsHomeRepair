@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
   selector: "app-footer",
   imports: [],
   template: `
-    <footer id="my_footer" class="text-black text-center text-lg-start">
+    <footer id="my_footer" class="text-center text-lg-start">
       <!-- Grid container -->
       <div class="container p-4">
         <!--Grid row-->

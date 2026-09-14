@@ -43,3 +43,10 @@ Thumbs.db
 
 .angular/
 .env
+
+# Claude Code tooling (skills, settings, local agent files)
+.claude/
+CLAUDE.md
+
+# Visual Studio local cache / index
+.vs/

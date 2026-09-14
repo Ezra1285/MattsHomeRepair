@@ -1,9 +1,5 @@
 import { Component } from "@angular/core";
-import {
-  RouterLinkWithHref,
-  RouterModule,
-  RouterOutlet,
-} from "@angular/router";
+import { RouterModule } from "@angular/router";
 
 @Component({
   selector: "app-hero-section",
@@ -12,11 +8,7 @@ import {
     <!-- Background image -->
 
     <div id="intro-example" class="p-5 text-center bg-image">
-      <div
-        id="heroContent"
-        class="mask"
-        style="background-color: rgba(0, 0, 0, 0.7);"
-      >
+      <div id="heroContent" class="mask">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white">
             <h1 class="mb-3">

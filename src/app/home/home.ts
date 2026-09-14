@@ -12,14 +12,16 @@ import { HeroSectionComponent } from "../hero-section/hero-section.component";
             id="headshot_photo"
             src="../../assets/family_photo.jpg"
             class="img-fluid"
-            alt="Headshot photo"
+            loading="lazy"
+            alt="Matt Morris, owner of Noble Custom Carpentry, with his family"
           />
         </div>
         <div id="photo_content" class="col-md-6">
           <img
             src="../../assets/home_logo.png"
             class="img-fluid"
-            alt="Repair logo"
+            loading="lazy"
+            alt="Noble Custom Carpentry logo"
           />
           <p>
             HI, I’m Matt Morris, owner and handyman at Noble Custom Carpentry

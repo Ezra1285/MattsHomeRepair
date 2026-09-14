@@ -49,13 +49,13 @@ import * as bootstrap from "bootstrap"; // Import Bootstrap JS types
 
                 <!-- Email input -->
                 <mdb-form-control class="mb-4">
-                  <label mdbLabel class="form-label" for="form4Example2"
+                  <label mdbLabel class="form-label" for="form4Example5"
                     >Phone number</label
                   >
                   <input
                     mdbInput
                     type="tel"
-                    id="form4Example2"
+                    id="form4Example5"
                     name="to_phone"
                     class="form-control"
                     pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
@@ -97,12 +97,19 @@ import * as bootstrap from "bootstrap"; // Import Bootstrap JS types
                 <!-- Submit button -->
                 <button
                   mdbRipple
-                  type="button"
                   type="submit"
                   id="liveToastBtn"
                   class="btn btn-primary btn-block mb-4"
+                  [disabled]="sending"
                 >
-                  Send
+                  @if (sending) {
+                  <span
+                    class="spinner-border spinner-border-sm me-2"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  Sending…
+                  } @else { Send }
                 </button>
                 <div class="toast-container position-fixed bottom-0 end-0 p-3">
                   <!-- ✅ Success Toast -->
@@ -163,9 +170,9 @@ import * as bootstrap from "bootstrap"; // Import Bootstrap JS types
               </p>
             </div>
 
-            <h2>
+            <h1>
               Hire Noble Custom Carpentry for all of your renovation needs
-            </h2>
+            </h1>
             <p>
               Thank you for visiting the website of Noble Custom Carpentry in
               Great Falls, MT. Whether you need trim and finish services or
@@ -201,9 +208,13 @@ import * as bootstrap from "bootstrap"; // Import Bootstrap JS types
   `,
   styleUrls: [`./contact.css`],
 })
-export class Contact {
+export class Contact implements AfterViewInit {
+  sending = false;
+
   public sendEmail(e: Event) {
     e.preventDefault();
+    if (this.sending) return;
+    this.sending = true;
 
     emailjs
       .sendForm(
@@ -217,12 +228,14 @@ export class Contact {
       .then(
         () => {
           console.log("SUCCESS!");
+          this.sending = false;
           this.resetForm();
           this.showToast("successToast");
         },
         (error) => {
           console.log("FAILED...", (error as EmailJSResponseStatus).text);
-          this.resetForm();
+          this.sending = false;
+          // Keep the user's input on failure so they don't have to retype
           this.showToast("errorToast");
         }
       );

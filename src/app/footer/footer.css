@@ -1,30 +1,42 @@
-h5,
-.copyright {
-  font-family: "Montserrat", Arial, sans-serif;
-  color: #b28a00;
-}
-
-p,
-li {
-  font-family: "Open Sans", "Times New Roman", serif;
-  color: #d4af37;
-}
-
 #my_footer {
-  background-color: #14232c;
+  background-color: var(--color-navy);
+  padding-top: var(--space-6);
+}
+
+#my_footer h5 {
+  font-family: var(--font-body);
+  color: var(--color-gold-light);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-3);
+}
+
+#my_footer p,
+#my_footer li {
+  font-family: var(--font-body);
+  color: var(--color-gold-light);
+  line-height: 1.8;
 }
 
 #contact_list a {
   text-decoration: none;
-  color: #d4af37;
+  color: var(--color-gold-light);
+  transition: color var(--transition);
 }
 
 #contact_list li:first-child {
-  padding-top: 8px;
+  padding-top: var(--space-2);
 }
 
 .linkClass:hover {
-  text-decoration: none;
-  font-weight: 600;
-  color: #b28a00;
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.copyright {
+  font-family: var(--font-body);
+  color: var(--color-gold-light);
+  background-color: rgba(0, 0, 0, 0.25) !important;
+  margin-top: var(--space-5);
 }

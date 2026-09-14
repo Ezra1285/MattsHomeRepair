@@ -1,59 +1,95 @@
-h2 {
-  font-family: "Montserrat", Arial, sans-serif;
-  margin-bottom: 15px;
+#main_contact_section {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
 }
 
 p,
 li,
 label {
-  font-family: "Open Sans", "Times New Roman", serif;
+  font-family: var(--font-body);
+}
+
+/* ── Form card ───────────────────────────────────────── */
+#form_content {
+  margin: var(--space-8) 0;
+}
+
+#email-form fieldset {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space-6);
+}
+
+#email-form .btn-primary {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-navy);
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.65rem 1.6rem;
+  transition: background var(--transition), border-color var(--transition),
+    transform var(--transition);
+}
+
+#email-form .btn-primary:hover {
+  background-color: var(--color-gold-light);
+  border-color: var(--color-gold-light);
+  color: var(--color-navy);
+  transform: translateY(-2px);
+}
+
+/* ── Contact details column ──────────────────────────── */
+#contact_content {
+  margin: var(--space-8) 0;
+  padding-left: var(--space-7);
+}
+
+#contact_content h1 {
+  font-size: var(--fs-h2);
+  color: var(--color-navy);
+  margin-bottom: var(--space-4);
+}
+
+#contact_content p {
+  color: var(--color-text-muted);
+  max-width: 54ch;
 }
 
 #info_list {
   list-style-type: none;
-  margin: 0px;
-  padding: 0px;
+  margin: var(--space-5) 0 0;
+  padding: 0;
+}
+
+#info_list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
 }
 
 #info_list li i {
-  color: #14232c;
-}
-
-#email-form fieldset {
-  background: white;
-  border: 0 none;
-  border-radius: 3px;
-  box-shadow: 0 0 15px 1px rgba(28, 47, 58, 0.3);
-  padding: 20px 30px;
-}
-
-#contact_content {
-  margin: 70px 0px 80px 0px;
-  padding-left: 50px;
-}
-
-#contact_content h2 {
-  color: #14232c;
-}
-
-#form_content {
-  margin: 60px 0px 125px 0px;
+  color: var(--color-gold);
+  font-size: 1.1rem;
 }
 
 #copy_label {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
-#main_contact_section {
-  margin: 0px 10px 0px 10px;
-}
-
+/* ── Animated tagline ────────────────────────────────── */
 .moving_text {
   display: inline-block;
   position: relative;
   font-size: 2rem;
   font-weight: 600;
+  color: var(--color-navy);
 }
 
 .word {
@@ -65,60 +101,53 @@ label {
   transition: opacity 0.8s ease-in-out;
 }
 
-#info_list li {
-  color: #14232c;
-  margin-bottom: 3px;
-}
-
 .letter {
   display: inline-block;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Animate letters out smoothly */
 .letter.out {
   opacity: 0;
   transform: translateY(-0.8em);
 }
 
-/* Hidden state before entering */
 .letter.behind {
   opacity: 0;
   transform: translateY(0.8em);
 }
 
-/* Animate letters in smoothly */
 .letter.in {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Optional: add a little delay to the whole word fade */
 .word.show {
   opacity: 1;
   transition: opacity 0.8s ease-in-out;
 }
 
+/* Harmonized to the brand palette */
 .wisteria {
-  color: #c0392b;
+  color: var(--color-gold);
 }
 .belize {
-  color: rgb(41, 8, 125);
+  color: var(--color-navy);
 }
 .pomegranate {
-  color: #27ae60;
+  color: var(--color-wood);
 }
 .green {
-  color: #1c2f3a;
+  color: var(--color-wood-dark);
 }
 .midnight {
-  color: #b28a00;
+  color: var(--color-wood-dark);
 }
 
+/* ── Responsive ──────────────────────────────────────── */
 @media (max-width: 770px) {
   #contact_content {
-    margin-bottom: 0px;
-    padding-left: 20px;
+    margin-bottom: 0;
+    padding-left: var(--space-4);
   }
 }
 
@@ -126,11 +155,8 @@ label {
   .moving_text {
     display: none;
   }
-  #contact_content {
-    margin-top: 35px;
-  }
 
-  #contact_content h2 {
-    font-weight: 700;
+  #contact_content {
+    margin-top: var(--space-6);
   }
 }

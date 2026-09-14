@@ -47,8 +47,9 @@ import {
                   <img
                     class="card-img-top"
                     data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                    alt="Thumbnail [100%x225]"
+                    alt="Custom kitchen cabinet installation by Noble Custom Carpentry"
                     src="../assets/cabinet1.jpg"
+                    loading="lazy"
                     data-holder-rendered="true"
                   />
                 </div>
@@ -84,8 +85,9 @@ import {
                   <img
                     class="card-img-top"
                     data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                    alt="Thumbnail [100%x225]"
+                    alt="Custom built-in shelving project"
                     src="../assets/shelf1.jpg"
+                    loading="lazy"
                     data-holder-rendered="true"
                   />
                 </div>
@@ -122,8 +124,9 @@ import {
                   <img
                     class="card-img-top"
                     data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                    alt="Thumbnail [100%x225]"
+                    alt="Custom fireplace hearth build"
                     src="../assets/hearth1.jpg"
+                    loading="lazy"
                     data-holder-rendered="true"
                   />
                 </div>
@@ -161,8 +164,9 @@ import {
                   <img
                     class="card-img-top"
                     data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                    alt="Thumbnail [100%x225]"
+                    alt="Custom closet and mudroom storage"
                     src="../assets/mudroom1.jpg"
+                    loading="lazy"
                     data-holder-rendered="true"
                   />
                 </div>
@@ -198,8 +202,9 @@ import {
                   <img
                     class="card-img-top"
                     data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                    alt="Thumbnail [100%x225]"
+                    alt="Interior trim and finish carpentry"
                     src="../assets/trimWork.png"
+                    loading="lazy"
                     data-holder-rendered="true"
                   />
                 </div>
@@ -222,8 +227,9 @@ import {
                   <img
                     class="card-img-top"
                     data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                    alt="Thumbnail [100%x225]"
+                    alt="Door and lock installation"
                     src="../assets/door1.jpg"
+                    loading="lazy"
                     data-holder-rendered="true"
                   />
                 </div>
@@ -257,11 +263,29 @@ import {
         />
 
         <!-- Navigation buttons -->
-        <button class="nav-btn prev" (click)="prevImage()">❮</button>
-        <button class="nav-btn next" (click)="nextImage()">❯</button>
+        <button
+          class="nav-btn prev"
+          (click)="prevImage()"
+          aria-label="Previous image"
+        >
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <button
+          class="nav-btn next"
+          (click)="nextImage()"
+          aria-label="Next image"
+        >
+          <i class="bi bi-chevron-right"></i>
+        </button>
 
         <!-- Close button -->
-        <button class="close-btn" (click)="closeLightbox()">✕</button>
+        <button
+          class="close-btn"
+          (click)="closeLightbox()"
+          aria-label="Close gallery"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
 
         <!-- Optional counter -->
         <div class="counter">

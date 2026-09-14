@@ -1,19 +1,14 @@
-import { Component, AfterViewInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { MdbCollapseModule } from "mdb-angular-ui-kit/collapse";
-import {
-  RouterLinkWithHref,
-  RouterModule,
-  RouterOutlet,
-} from "@angular/router";
+import { RouterModule } from "@angular/router";
 
 @Component({
   selector: "app-navbar",
   imports: [MdbCollapseModule, RouterModule],
   template: `
     <nav
-      class="navbar navbar-expand-lg bg-body-tertiary"
+      class="navbar navbar-expand-lg"
       data-mdb-theme="light"
-      style="background-color: #e3f2fd;"
     >
       <!-- Container wrapper -->
       <div class="container-fluid">
@@ -44,7 +39,7 @@ import {
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
-                class="nav-link active"
+                class="nav-link"
                 routerLink="/home"
                 routerLinkActive="active"
                 [routerLinkActiveOptions]="{ exact: true }"
@@ -67,6 +62,12 @@ import {
                 >Contact Us</a
               >
             </li>
+            <li class="nav-item ms-lg-3">
+              <a class="nav-link nav-call" href="tel:4067504447">
+                <i class="bi bi-telephone-fill"></i>
+                (406) 750-4447
+              </a>
+            </li>
           </ul>
           <!-- Left links -->
         </div>
@@ -77,15 +78,4 @@ import {
   `,
   styleUrls: ["./navbar.component.css"],
 })
-export class Navbar {
-  ngAfterViewInit(): void {
-    const navLinks = document.querySelectorAll<HTMLAnchorElement>(".nav-link");
-
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.forEach((l) => l.classList.remove("active"));
-        link.classList.add("active");
-      });
-    });
-  }
-}
+export class Navbar {}

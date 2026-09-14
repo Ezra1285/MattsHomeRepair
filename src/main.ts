@@ -10,7 +10,6 @@ import { App } from "./app/app";
 import {
   PreloadAllModules,
   provideRouter,
-  withDebugTracing,
   withPreloading,
 } from "@angular/router";
 import { APP_ROUTES } from "./app/app.routes";
@@ -18,10 +17,6 @@ import { APP_ROUTES } from "./app/app.routes";
 bootstrapApplication(App, {
   providers: [
     provideProtractorTestingSupport(),
-    provideRouter(
-      APP_ROUTES,
-      withPreloading(PreloadAllModules),
-      withDebugTracing()
-    ),
+    provideRouter(APP_ROUTES, withPreloading(PreloadAllModules)),
   ],
 }).catch((err) => console.error(err));

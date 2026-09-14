@@ -1,89 +1,216 @@
-h1,
-h2,
-button {
-  font-family: "Montserrat", Arial, sans-serif;
+#main_service_section {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
 }
 
-h2 {
+/* ── Intro / jumbotron ───────────────────────────────── */
+.jumbotron {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.jumbotron-heading {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  font-weight: 400;
+  color: var(--color-navy);
+  margin-bottom: var(--space-4);
+}
+
+.jumbotron .lead {
+  max-width: 70ch;
+  margin: 0 auto var(--space-5);
+  color: var(--color-text-muted) !important;
+  font-size: var(--fs-lead);
+}
+
+.jumbotron a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  background-color: var(--color-gold);
+  color: var(--color-navy);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
   font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), background var(--transition),
+    box-shadow var(--transition);
 }
 
-.service_section h2,
-p {
-  color: #14232c;
+.jumbotron a:hover {
+  background-color: var(--color-gold-light);
+  color: var(--color-navy);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
-p {
-  font-family: "Open Sans", "Times New Roman", serif;
+.jumbotron a i {
+  margin: 0;
 }
 
-.card-text {
-  font-weight: 600;
+.jumbotron a:hover .my_icon {
+  position: relative;
+  animation: moveIcon 1s infinite alternate;
+}
+
+@keyframes moveIcon {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 8px;
+  }
+}
+
+/* ── Service cards ───────────────────────────────────── */
+.album {
+  background: transparent !important;
+  padding-top: var(--space-4) !important;
+  padding-bottom: var(--space-8) !important;
+}
+
+.service_section {
+  margin-bottom: var(--space-5);
+  transition: transform var(--transition);
 }
 
 .card.mb-4.box-shadow {
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
+  margin-bottom: 0 !important;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+
+/* Image column — image is absolutely filled so the photo's aspect ratio
+   never dictates card height. Card height comes from the text + min-height,
+   giving every card a consistent size regardless of portrait/landscape photos. */
+.card.mb-4.box-shadow > .row-md-4 {
+  flex: 0 0 42%;
+  max-width: 360px;
+  position: relative;
+  overflow: hidden;
 }
 
 .service_section img {
-  float: left;
-  width: 325px;
-  height: 300px;
-  object-fit: fill;
+  float: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .card-body {
-  height: 300px;
-  width: 100%;
-}
-
-.card-body h2 {
-  margin-top: 15px;
-  margin-bottom: 25px;
-}
-
-.card-body p {
-  margin-bottom: 25px;
+  flex: 1 1 auto;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  padding: var(--space-5) var(--space-6);
 }
 
 .card_text {
-  margin-left: 20px;
+  margin-left: 0;
 }
 
-.jumbotron {
-  margin-top: 35px;
-  margin-bottom: 30px;
+.card-body h2 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  font-weight: 400;
+  color: var(--color-navy);
+  margin: 0 0 var(--space-3);
+  transition: color var(--transition);
 }
 
-.jumbotron a {
-  background-color: #b28a00;
-  font-size: 20px;
+.card-body p.card-text {
+  font-family: var(--font-body);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  margin-bottom: var(--space-4);
 }
 
-.jumbotron a i {
-  margin-right: 30px;
-  margin-left: 5px;
+/* Card CTA button */
+.service_section button.open-btn {
+  background-color: var(--color-navy);
+  color: #fff;
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition), color var(--transition);
 }
 
-.service_section button {
-  background-color: #14232c;
-  color: white;
+.service_section button.open-btn:hover {
+  background-color: var(--color-gold);
+  color: #fff;
 }
 
-#main_service_section {
-  margin: 0px 10px 0px 10px;
+/* Hover: subtle lift + gold accent (replaces the old green) */
+.service_section:hover {
+  transform: translateY(-4px);
+  position: relative;
+  z-index: 1;
 }
 
-/* Lightbox overlay */
+.service_section:hover .card {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-gold);
+}
+
+.service_section:hover h2 {
+  color: var(--color-gold);
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 768px) {
+  .card.mb-4.box-shadow {
+    flex-direction: column;
+  }
+
+  .card.mb-4.box-shadow > .row-md-4 {
+    flex: 0 0 auto;
+    max-width: 100%;
+    height: 240px;
+  }
+
+  .card-body {
+    min-height: 0;
+    padding: var(--space-5);
+  }
+}
+
+@media (max-width: 400px) {
+  .card.mb-4.box-shadow > .row-md-4 {
+    height: 200px;
+  }
+
+  .card-body {
+    padding: var(--space-4);
+  }
+}
+
+/* ── Custom lightbox gallery ─────────────────────────── */
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(20, 35, 44, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 2000;
   animation: fadeIn 0.3s ease;
 }
 
@@ -99,46 +226,44 @@ p {
 .lightbox-img {
   max-width: 100%;
   max-height: 90vh;
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
   transition: opacity 0.3s ease;
   object-fit: contain;
 }
 
-/* Navigation buttons */
 .nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.2);
   border: none;
   color: white;
   font-size: 2rem;
   padding: 10px 16px;
   border-radius: 50%;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background var(--transition);
   z-index: 10;
 }
 
 .nav-btn:hover {
-  background: rgba(255, 255, 255, 0.6);
+  background: var(--color-gold);
 }
 
 .prev {
-  left: 10px; /* ✅ now visible even on small screens */
+  left: 10px;
 }
 
 .next {
-  right: 10px; /* ✅ same here */
+  right: 10px;
 }
 
-/* Close button */
 .close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.2);
   border: none;
   color: white;
   font-size: 1.5rem;
@@ -146,13 +271,13 @@ p {
   border-radius: 50%;
   cursor: pointer;
   z-index: 11;
+  transition: background var(--transition);
 }
 
 .close-btn:hover {
-  background: rgba(255, 255, 255, 0.6);
+  background: var(--color-gold);
 }
 
-/* Counter text */
 .counter {
   position: absolute;
   bottom: 10px;
@@ -160,10 +285,9 @@ p {
   font-size: 1rem;
   text-align: center;
   width: 100%;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
-/* ✅ Make it mobile friendly */
 @media (max-width: 600px) {
   .nav-btn {
     font-size: 1.5rem;
@@ -186,79 +310,11 @@ p {
   }
 }
 
-/* Fade animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
-  }
-}
-.service_section {
-  transition: transform 0.25s, background 0.25s;
-}
-
-.service_section:hover {
-  transform: scale(1.05);
-  background: #8dc63f;
-  position: relative;
-  z-index: 1;
-}
-
-.service_section:hover h2 {
-  color: #b28a00;
-}
-
-.service_section:hover button {
-  background-color: #b28a00;
-}
-
-.jumbotron a:hover .my_icon {
-  position: relative; /* Essential for 'left', 'top', etc. to work */
-  animation: moveIcon 1s infinite alternate; /* Apply the animation */
-}
-
-@keyframes moveIcon {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: 10px; /* Move 100px to the right */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .card.mb-4.box-shadow {
-    flex-direction: column;
-  }
-
-  .card.mb-4.box-shadow img {
-    width: 515px;
-    height: 300px;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 606px) {
-  .card.mb-4.box-shadow img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
-
-@media (max-width: 444px) {
-  .card.mb-4.box-shadow {
-    min-height: 650px;
-  }
-}
-
-@media (max-width: 380px) {
-  .card.mb-4.box-shadow p {
-    font-size: 14px;
-  }
-
-  .card.mb-4.box-shadow h2 {
-    font-size: 22px;
   }
 }
