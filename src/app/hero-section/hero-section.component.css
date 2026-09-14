@@ -24,13 +24,38 @@
   margin: 0;
 }
 
+/* Eyebrow / kicker above the headline */
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-gold-light);
+  margin: 0 0 var(--space-3);
+}
+
+.hero-eyebrow::before,
+.hero-eyebrow::after {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: var(--color-gold-light);
+  opacity: 0.75;
+}
+
 #intro-example h1 {
   font-family: var(--font-heading);
   font-size: var(--fs-hero);
   font-weight: 400;
-  max-width: 20ch;
+  line-height: 1.1;
+  max-width: 22ch;
   margin: 0 auto var(--space-4);
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+  text-wrap: balance;
 }
 
 #intro-example h5 {
@@ -68,4 +93,18 @@
   background: var(--color-gold-light);
   border-color: var(--color-gold-light);
   color: var(--color-navy);
+}
+
+/* On small phones, drop the side rules so the eyebrow wraps cleanly centered */
+@media (max-width: 480px) {
+  .hero-eyebrow {
+    display: block;
+    letter-spacing: 0.16em;
+    font-size: 0.72rem;
+  }
+
+  .hero-eyebrow::before,
+  .hero-eyebrow::after {
+    display: none;
+  }
 }

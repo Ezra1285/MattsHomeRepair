@@ -11,6 +11,7 @@ import { RouterModule } from "@angular/router";
       <div id="heroContent" class="mask">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white">
+            <p class="hero-eyebrow">Custom Carpentry &amp; Finish Work</p>
             <h1 class="mb-3">
               Choose Noble Custom Carpentry For Your Next Project
             </h1>
